@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>API Nasa</title>
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+  <nav class="shadow-lg p-3 mb-5 navbar navbar-expand-lg navbar-light bg-light">
+    <div class="d-flex justify-content-evenly container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <img src="./images/nasa.png" alt="logo nasa" width="75px">
+      <div class="text-center collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link "  href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="photo.html">picture of the day</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="asteroid.html">asteroids</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="archivePhoto.html">archive picture</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <h1 class="mt-5 text-center text-decoration-underline" > List of asteroids which are passing near the planet earth </h1>
+
+    <div>
+      <p class="text-center text-decoration-underline">
+        choose two dates with a maximum of 7 days apart !</p>
+    </div>
+
+    <div class="mb-2 responsive container justify-content-evenly d-flex m-auto ">
+        <div class="text-center">
+          <label class="text-decoration-underline" for="formDate"> Start Date </label>
+          <input id="choose1" type="date" class="form-control"  aria-label="start date">
+        </div>
+        <div class="text-center">
+          <label class="text-decoration-underline" for="formDate"> End Date </label>
+          <input id="choose2" type="date" class="form-control" placeholder="end date" aria-label="end date">
+        </div> 
+    </div>
+    <div class="container d-flex justify-content-center"> 
+    <button id="btn" onclick="chooseDate()" type="submit" class="mb-5 btn btn-light">
+    submit
+    </button>
+    </div>
+    
+    
+      <div id="card" class="flex-wrap d-flex justify-content-evenly m-auto row container">
+        <!-- <h1 class="mb-.5 text-center">date du jour</h1>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>  
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>    
+      </div>
+      <div class="d-flex justify-content-evenly m-auto row container">
+        <h1 class="mb-.5 text-center">date du jour</h1>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>  
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>    
+      </div>
+      <div class="d-flex justify-content-evenly m-auto row container">
+        <h1 class="mb-.5 text-center">date du jour</h1>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>  
+        <div class="shadow-lg p-3 mb-5 bg-white m-2 card" style="width: 20rem;">
+          <h2 class="text-center">title</h2>
+          <div class="card-body">
+            <ul>
+              <li>vitesse</li>
+              <li>diametre</li>
+              <li>date</li>
+            </ul>
+          </div>
+        </div>     -->
+      </div>
+
+      <!-- MODAL -->
+      <div  class="modal fade"  id="modal" tabindex="-1" role="dialog" aria-labelledby="modalResearch" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class=" d-flex justify-content-center modal-content">
+            <div  class="divContainer d-flex justify-content-center align-item-center modal-header">
+              <h2 class="title" id="title">INVALID DATE</h2>
+              <img class="image" src="./images/system-error.gif" alt="">
+            </div>
+            <div class="avertissement text-center pt-5 pb-5 " id="content">
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+    
+    <script src="./js/asteroide.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/jquery-latest.js"></script>
+  </body>
+</html>

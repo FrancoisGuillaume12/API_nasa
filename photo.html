@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>API nasa</title>
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+  <nav class="shadow-lg p-3 mb-5 navbar navbar-expand-lg navbar-light bg-light">
+    <div class="d-flex justify-content-evenly container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <img src="./images/nasa.png" alt="logo nasa" width="75px">
+      <div class="text-center collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link " href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"  href="photo.html">picture of the day</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="asteroid.html">asteroids</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="archivePhoto.html">archive picture</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <h1 class="text-decoration-underline text-center mb-5">picture of the day</h1>
+
+  <div class=" d-flex justify-content-center m-2">
+      <div class=" text-center shadow-lg p-3 mb-5 bg-white rounded card" style="width: 60rem;">
+        <h1 title="name" id="header"> </h1>
+        <p title="date" id="date"></p>
+          <div id="commeTuVeux" class="d-flex justify-content-center">  
+          </div>
+          <div  class="card-body">
+            <H3 class="text-decoration-underline">description :</h3>
+          <p id="content" class=" p-5 card-text"></p>
+          </div>
+      </div>
+  </div>
+    
+    <script src="./js/photo.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</body>
+</html>
