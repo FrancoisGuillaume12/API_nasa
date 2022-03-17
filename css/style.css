@@ -1,0 +1,33 @@
+.modal-content{
+    display: flex;
+    justify-content: end;
+}
+
+.title{
+    color: rgb(196, 0, 0) ;
+    text-decoration: underline;
+}
+
+.avertissement{
+    color: black ;
+    font-size: larger; 
+    font-weight: bolder;
+}
+
+.divContainer{
+    flex-direction: column;
+    background-color: black;
+}
+
+.image{
+    width: 250px;
+}
+
+@media screen and (max-width: 500px)
+{
+    .responsive{
+        display: flex;
+        flex-direction: column;
+        max-width: 60%;
+    }
+}
